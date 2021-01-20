@@ -12,3 +12,8 @@
 - Conditionals and loops
 - Str and advanced function
 
+### [[Day 3] 파이썬 기초 문법2](https://github.com/ydy8989/boostcamp/tree/main/Day_3)
+
+- Python Data Structure
+- Pythonic code
+
