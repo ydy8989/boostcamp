@@ -1,4 +1,5 @@
-# boostcamp
+# [Week 1] Python Basics For AI - 최성철 교수님
+
 ### [[Day 1] 파이썬 AI 개발환경 준비](https://github.com/ydy8989/boostcamp/tree/main/Week_1/Day_1)
 
 - Basic computer class for newbies
@@ -26,3 +27,8 @@
 
 - File / Exception / Log Handling
 - Python data handling
+
+
+
+### [1주차 강의자료는 여기에](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai)
+
