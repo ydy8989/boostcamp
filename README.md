@@ -1,4 +1,12 @@
-# [[Week 1] Python Basics For AI - 최성철 교수](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
+# BoostCamp AI tech
+
+## 진행기간
+
+- 2021.01.18 ~ 진행중 (2021.06 종료 예정)
+
+## U Stage
+
+### [[Week 1] Python Basics For AI - 최성철 교수](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
 
 - [DAY 1] 파이썬/AI 개발환경 준비하기
 - [DAY 2] 파이썬 기초 문법
