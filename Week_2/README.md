@@ -6,7 +6,10 @@
 - [AI Math 1강] 벡터가 뭐에요?
 - [AI Math 2강] 행렬이 뭐에요?
 
-**~~[[DAY 7] 경사하강법]()~~**
+**[[DAY 7] 경사하강법](https://github.com/ydy8989/boostcamp/tree/main/Week_2/Day_2)**
+
+- [AI Math 3강] 경사하강법(순한맛)
+- [AI Math 4강] 경사하강법(매운맛)
 
 **~~[[DAY 8] Pandas / 딥러닝 학습방법 이해하기 ]()~~**
 
