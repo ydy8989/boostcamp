@@ -34,7 +34,7 @@
 
 - 미분은 함수$$f$$의 주어진 점 $$(x,f(x))$$에서의 **<u>접선의 기울기</u>**를 의미한다.
 
-  ![image-20210126183651460](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210126183651460.png)
+  ![image-20210126183651460](https://user-images.githubusercontent.com/38639633/105856533-b10a4580-602c-11eb-8ab7-3ad935e38ca8.png)
 
   > h를 0으로 수렴시키면 결국 점$$x$$에서의 기울기 값이 되는데, 이 값을 미분값이라고 한다.
 
@@ -91,7 +91,7 @@
 
 - 다차원 공간에서의 그래디언트 벡터의 모습(3차원)
 
-  ![image-20210126193241252](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210126193241252.png)
+  ![image-20210126193241252](https://user-images.githubusercontent.com/38639633/105856536-b23b7280-602c-11eb-97fa-02757a14e4d7.png)
 
   > 극소점으로 향하는 각 차원(x, y, z)의 기울기 변화를 그린 모습
 
