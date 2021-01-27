@@ -119,8 +119,8 @@ $$
 ## 1.5. Backpropagation
 
 - 딥러닝은 역전파를 이용하여 각 층에 사용된 파라미터를 학습한다. 
-  - 여기서 파라미터란 $\left\{\mathbf{W}^{(l)}, \mathbf{b}^{(l)}\right\}^L_{l=1}$
-- 손실함수(Loss func. 혹은 Cost func.)를 $\mathscr{L}$이라 했을 때 역전파는 $\part\mathscr{L} / \part\mathbf{W}^{(l)}$ 정보를 계산할 때 사용된다. 
+  - 여기서 파라미터란 $$\left\{ \mathbf{W}^{(l)}, \mathbf{b}^{(l)}\right\}^L_{l=1}$$
+- 손실함수(Loss func. 혹은 Cost func.)를 $\mathscr{L}$이라 했을 때 역전파는 $\partial\mathscr{L}$/ $\partial\mathbf{W}^{(l)}$ 정보를 계산할 때 사용된다. 
 
 - 역전파는 Chain Rule을 이용하여 윗층(마지막 층)부터 input 방향으로 거꾸로 계산하게 된다.
 

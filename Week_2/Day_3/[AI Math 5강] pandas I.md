@@ -72,7 +72,7 @@
   df
   ```
 
-- ![image-20210127173704440](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127173704440.png)
+- ![image-20210127173704440](https://user-images.githubusercontent.com/38639633/105992261-3c94dc80-60e8-11eb-88f6-297ca047145e.png)
 
 - 데이터프레임이 갖고 있지 않은 index 및 column명을 호출해주면 그 값들이 `NaN`으로 채워진다. 
 
