@@ -11,7 +11,10 @@
 - [AI Math 3강] 경사하강법(순한맛)
 - [AI Math 4강] 경사하강법(매운맛)
 
-**~~[[DAY 8] Pandas / 딥러닝 학습방법 이해하기 ]()~~**
+**[[DAY 8] Pandas / 딥러닝 학습방법 이해하기 ](https://github.com/ydy8989/boostcamp/tree/main/Week_2/Day_3)**
+
+- [AI Math 5강] pandas I
+- [AI Math 5강] 딥러닝 학습방법 이해하기
 
 **~~[[DAY 9] Pandas II / 확률론]()~~**
 
