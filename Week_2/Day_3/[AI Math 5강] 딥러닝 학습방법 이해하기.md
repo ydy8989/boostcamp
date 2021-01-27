@@ -21,7 +21,7 @@ softmax 함수의 결과값을 분류 모델의 학습에 어떤식으로 사용
 
  **선형모델 review**
 
-![image-20210127104658354](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127104658354.png)
+![image-20210127104658354](https://user-images.githubusercontent.com/38639633/105992361-5d5d3200-60e8-11eb-8d75-8b715288b86e.png)
 
 > 위와 같은 형태의 벡터 및 행렬의 곱으로 이루어진 모델을 말한다. 
 >
@@ -50,7 +50,7 @@ $$
 
 - Classification task를 풀 때 선형모델과 소프트맥스 함수를 결합하여 예측합니다. 
 
-  ![image-20210127202004129](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127202004129.png)
+  ![image-20210127202004129](https://user-images.githubusercontent.com/38639633/105992267-3dc60980-60e8-11eb-9f82-54766b0eeaee.png)
 
   > ```python
   > def softmax(vec):
@@ -62,7 +62,7 @@ $$
   > softmax(vec)
   > ```
   >
-  > ![image-20210127202226842](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127202226842.png)
+  > ![image-20210127202226842](https://user-images.githubusercontent.com/38639633/105992268-3ef73680-60e8-11eb-9d95-aae16facd5c7.png)
 
 - 단, 학습이아닌 `Inference`를 수행하는 과정에서는 <u>굳이</u> softmax를 사용하지는 않는다. 
 
@@ -85,7 +85,7 @@ $$
 
 - 시그모이드(sigmoid) 함수나 tanh 함수는 전통적으로 쓰이던 활성함수지만 <u>딥러닝에선 ReLU를 많이 쓰고있다.</u> 
 
-  ![image-20210127203509334](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127203509334.png)
+  ![image-20210127203509334](https://user-images.githubusercontent.com/38639633/105992275-40c0fa00-60e8-11eb-8f46-50cf9cc63122.png)
 
   
 
@@ -93,7 +93,7 @@ $$
 
 - 1개의 선형모델 + 1개의 활성화 함수가 아닌, 여러개의 선형모델+활성화함수로 이루어진 함수를 의미한다. 
 
-- ![image-20210127204002881](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210127204002881.png)
+- ![image-20210127204002881](https://user-images.githubusercontent.com/38639633/105992289-44ed1780-60e8-11eb-82bd-c6e7776cedc8.png)
 
   > 좌측에서 $\rightarrow$ 우측방향으로
   >
@@ -110,6 +110,7 @@ $$
   > input vector $\mathbf{X}$는 선형모델을 거쳐($\mathbf{W}$, $\mathbf{b}$) output vector $\mathbf{Z}$는 비활성함수 $\sigma$를 거쳐 새로운 latent vector $\mathbf{H}$가 된다. 이와 비슷한 방식의 두 번째 선형모델과 활성화함수를 거쳐 $l$번째 latent vector $\mathbf{H}^{(l)}$이 되고, 이러한 모델을 `multi layer perceptron`이라고 한다. 
 
 - 이론적으로 2-layer NN은 임의의 연속함수를 근사할 수 있다. 
+  
   - **<u>universal approximation theorem</u>**
 - **층을 여러개 쌓는 이유?**
   - 층이 깊을수록 목적함수를 근사하는 데 필요한 뉴런(노드)의 숫자가 훨씬 빨리 줄어들어 좀 더 효율적으로 학습이 가능하다..
