@@ -1,4 +1,4 @@
-### [DAY 3] Pandas / 딥러닝 학습방법 이해하기 
+## [DAY 3] Pandas / 딥러닝 학습방법 이해하기 
 
 - pandas 패키지의 개요. 
   - series와 pandas의 기본함수
