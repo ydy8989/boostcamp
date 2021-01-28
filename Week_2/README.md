@@ -16,7 +16,10 @@
 - [AI Math 5강] pandas I
 - [AI Math 5강] 딥러닝 학습방법 이해하기
 
-**~~[[DAY 4] Pandas II / 확률론]()~~**
+**[[DAY 4] Pandas II / 확률론](https://github.com/ydy8989/boostcamp/tree/main/Week_2/Day_4)**
+
+- [AI Math 6강] pandas II
+- [AI Math 6강] 확률론 맛보기
 
 **~~[[DAY 5] 시각화 / 통계학]()~~**
 
