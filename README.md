@@ -6,6 +6,8 @@
 
 ## U Stage
 
+- 1~2주차 강의 **[code](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai)**
+
 ### [[Week 1] Python Basics For AI - 최성철 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
 
 - [DAY 1] 파이썬/AI 개발환경 준비하기
@@ -21,3 +23,4 @@
 - [DAY 8] Pandas / 딥러닝 학습방법 이해하기
 - [DAY 9] Pandas II / 확률론
 - [DAY 10] 시각화 / 통계학
+

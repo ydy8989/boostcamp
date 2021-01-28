@@ -29,6 +29,3 @@
 - Python data handling
 
 
-
-### [1주차 강의자료는 여기에](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai)
-
