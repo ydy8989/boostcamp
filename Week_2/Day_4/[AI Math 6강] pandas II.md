@@ -20,7 +20,7 @@
   df.groupby('team')['Point'].sum()
   ```
 
-  > ![image-20210128155107847](https://user-images.githubusercontent.com/38639633/106174269-2c5c2a80-61d8-11eb-98d5-1110d4e41d8f.png){: width="45%"}{: .center}![image-20210128155113720](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210128155113720.png){: width="45%"}{: .center}
+  > ![image-20210128155107847](https://user-images.githubusercontent.com/38639633/106174269-2c5c2a80-61d8-11eb-98d5-1110d4e41d8f.png){: width="45%"}{: .center}![image-20210128155113720](https://user-images.githubusercontent.com/38639633/106176866-2c115e80-61db-11eb-98ff-ad7c5d963a33.png){: width="45%"}{: .center}
 
 - 한 개 이상의 Column을 묶을 수도 있다. 
 
