@@ -70,7 +70,6 @@ plt.show()
   \mathbb{E}[S^2] = \sigma^2
   $$
   
-
 - 표본 분산의 계산 시 $N-1$로 나노는 이유는 unbiased(불편)추정량을 구하기 위해서이다.
 
 - 통계량의 확률분포를 표집분포라 부르며, 특히, 표본평균의 표집분포는 $N$이 커질수록 정규분포 $\mathcal{N}(\mu, \sigma^2/N)$를 따른다.
@@ -224,8 +223,7 @@ N_k=\sum^N_{i=1}x_{i,k} ~\text{이고,}\\
 $$
 이다. 이때, 함수를 최대화하는 모수의 값을 찾아야 하는데 모수는 제한조건 
 $$
-
-\sum_{k=1}^K \mu_k = 1
+\sum_{k=1}^K \mu_k = 1
 $$
 을 만족해야만 한다. 따라서 [`라그랑주 승수법`](https://untitledtblog.tistory.com/96)을 사용하여 로그가능도에 제한조건을 추가한 새로운 목적함수를 생각할 수 있다. 
 $$
@@ -257,15 +255,15 @@ $$
 $$
 
 $$
-N_k = \lambda \mu_k
+N_k = \lambda \mu_k
 $$
 
 $$
-\sum_{k=1}^K N_k = \lambda \sum_{k=1}^K \mu_k  = \lambda = N
+\sum_{k=1}^K N_k = \lambda \sum_{k=1}^K \mu_k  = \lambda = N
 $$
 
 $$
-\mu_k = \dfrac{N_k}{N}
+\mu_k = \dfrac{N_k}{N}
 $$
 
 따라서 결론은 다음과 같다.
@@ -333,4 +331,8 @@ $$
 중요한 점은 앞서 식 `(1)`의 $\hat{\theta}_{MLE}$는 분류문제에서 정답레이블을 $P$, 모델 예측을 $Q$라 두면 최대가능도 추정법은 쿨백-라이블러 발산을 최소화하는 것과 같다고 할 수 있다. 
 
 
+
+### References
+
+> https://datascienceschool.net/02%20mathematics/09.02%20%EC%B5%9C%EB%8C%80%EA%B0%80%EB%8A%A5%EB%8F%84%20%EC%B6%94%EC%A0%95%EB%B2%95.html#id14
 
