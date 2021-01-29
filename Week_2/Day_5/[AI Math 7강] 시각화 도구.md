@@ -23,7 +23,7 @@
 
 
 
-## 2. Seaborn
+# 2. Seaborn
 
 seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai/blob/main/codes/viz/3_seaborn.ipynb)에서 확인할 수 있습니다. 
 
@@ -43,7 +43,7 @@ seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITec
   sns.lineplot(x='total_bill', y = 'tip', data = tips)
   ```
 
-  > ![image-20210129124334704](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129124334704.png)
+  > ![image-20210129124334704](https://user-images.githubusercontent.com/38639633/106301490-1f543f80-629b-11eb-82dc-e02d7b04c1bd.png)
 
   - lineplot의 경우 `data`에 데이터프레임을 넣고, `x`축과 `y`축에 해당하는 column을 넣어 사용한다. 
   - 보이는 것과 같이 데이터의 평균을 main 라인으로 그려주고 분포의 퍼짐 정도를 보여준다.
@@ -54,7 +54,7 @@ seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITec
   sns.lineplot(x='timepoint', y = 'signal', hue = 'event', data = fmri)
   ```
 
-  > ![image-20210129172820410](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129172820410.png)
+  > ![image-20210129172820410](https://user-images.githubusercontent.com/38639633/106301488-1ebba900-629b-11eb-9aa6-d64caf9f85b7.png)
 
   - `hue` : x와 y에 numeric 데이터 컬럼을 넣고, hue에 categorical 데이터를 넣으면, 각 카테고리별 x와 y의 관계를 표현해준다. 
 
@@ -62,13 +62,13 @@ seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITec
   sns.scatterplot(x="total_bill", y="tip", data=tips)
   ```
 
-  > ![image-20210129173042234](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129173042234.png)
+  > ![image-20210129173042234](https://user-images.githubusercontent.com/38639633/106301487-1ebba900-629b-11eb-9b8b-bff7b8f9458f.png)
 
   ```python
   sns.regplot(x="total_bill", y="tip", data=tips)
   ```
 
-  > ![image-20210129173137961](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129173137961.png)
+  > ![image-20210129173137961](https://user-images.githubusercontent.com/38639633/106301485-1e231280-629b-11eb-998a-77ff3c86bbaa.png)
 
   - `scatterplot`은 말 그대로 점으로 두 column의 관계를 표시해준다. 
   - `regplot`은 scatter에 추가적으로 회귀 선을 그려주는 plotting 메소드이다. 
@@ -78,14 +78,14 @@ seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITec
   sns.countplot(x="smoker", hue="time", data=tips)
   ```
 
-  > ![image-20210129173405640](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129173405640.png)
+  > ![image-20210129173405640](https://user-images.githubusercontent.com/38639633/106301482-1e231280-629b-11eb-8b7e-889ffcf440dd.png)
 
   ```python
   sns.set(style="darkgrid")
   sns.distplot(tips['total_bill'])
   ```
 
-  >![image-20210129173513532](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129173513532.png)
+  >![image-20210129173513532](https://user-images.githubusercontent.com/38639633/106301479-1d8a7c00-629b-11eb-80a2-f2542ccd6735.png)
 
 ### predefined plots
 
@@ -125,7 +125,7 @@ seaborn의 예제코드는 [`3_seaborn.ipynb`](https://github.com/BoostcampAITec
   plt.tight_layout()
   ```
 
-  > ![image-20210129174256632](C:\Users\doyeon\AppData\Roaming\Typora\typora-user-images\image-20210129174256632.png)
+  > ![image-20210129174256632](https://user-images.githubusercontent.com/38639633/106301474-1cf1e580-629b-11eb-902a-2584cef8491a.png)
 
 
 
