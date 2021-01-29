@@ -246,7 +246,7 @@
 
   ![image-20210128203251180](https://user-images.githubusercontent.com/38639633/106174692-a7254580-61d8-11eb-87c6-ca702154dd88.png)
 
-  > 더 자세한 코드 예제는 [여기](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai/blob/main/codes/pandas/%232/3_merge_concat.ipynb)
+  > 더 자세한 코드 예제는 [여기](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai/blob/main/codes/pandas/part_2/3_merge_concat.ipynb)
 
 - **Index based join**
 
