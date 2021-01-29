@@ -24,3 +24,11 @@
 - [DAY 9] Pandas II / 확률론
 - [DAY 10] 시각화 / 통계학
 
+### [[Week 3] DL Basic - 최성준 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_3)
+
+- [DAY 11] 딥러닝 기초
+- [DAY 12] 최적화
+- [DAY 13] Convolutional Neural Networks
+- [DAY 14] Recurrent Neural Networks
+- [DAY 15] Generative model
+

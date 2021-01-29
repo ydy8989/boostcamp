@@ -21,5 +21,8 @@
 - [AI Math 6강] pandas II
 - [AI Math 6강] 확률론 맛보기
 
-**~~[[DAY 5] 시각화 / 통계학]()~~**
+**[[DAY 5] 시각화 / 통계학](https://github.com/ydy8989/boostcamp/tree/main/Week_2/Day_5)**
+
+- [AI Math 7강] 시각화 도구
+- [AI Math 7강] 통계학 맛보기
 
