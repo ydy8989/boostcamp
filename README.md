@@ -6,7 +6,7 @@
 
 ## U Stage
 
-- 1~2주차 강의 **[code](https://github.com/BoostcampAITech/lecture-note-python-basics-for-ai)**
+- 1~2주차 강의 **[code](https://github.com/ydy8989/lecture-note-python-basics-for-ai)**
 
 ### [[Week 1] Python Basics For AI - 최성철 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
 
