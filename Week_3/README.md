@@ -1,6 +1,6 @@
 # [Week 3] DL Basic - 최성준 교수님
 
-[**[DAY 11] 딥러닝 기초**]()
+[**[DAY 11] 딥러닝 기초**](https://github.com/ydy8989/boostcamp/tree/main/Week_3/Day_1)
 
 - [DL Basic] Week 3 Overview
 - [AI Math 8강] 베이즈 통계학 맛보기
