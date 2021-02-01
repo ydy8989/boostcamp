@@ -11,7 +11,7 @@
 - [DL Basic] MLP Assignment
 - [DL Basic] 데이터셋 다루기
 
-[**[DAY 12] 최적화**]()
+[**[DAY 12] 최적화**](https://github.com/ydy8989/boostcamp/tree/main/Week_3/Day_2)
 
 - [DL Basic] Week 3 Overview
 - [AI Math 8강] 베이즈 통계학 맛보기
@@ -22,7 +22,7 @@
 - [DL Basic] MLP Assignment
 - [DL Basic] 데이터셋 다루기
 
-[**[DAY 13] Convolutional Neural Networks**]()
+[**[DAY 13] Convolutional Neural Networks**](https://github.com/ydy8989/boostcamp/tree/main/Week_3/Day_3)
 
 - [DL Basic] CNN - Convolution은 무엇인가?
 - [DL Basic] Modern CNN - 1x1 convolution의 중요성
@@ -32,7 +32,7 @@
 - [DL Basic] CNN - 나만의 데이터셋 만들기
 - [DL Basic] 과제 해설 - Optimization
 
-[**[DAY 14] Recurrent Neural Networks**]()
+[**[DAY 14] Recurrent Neural Networks**](https://github.com/ydy8989/boostcamp/tree/main/Week_3/Day_4)
 
 - [AI MATH 10강] RNN 첫걸음
 - [AI MATH 10강 퀴즈] RNN 첫걸음 - 1~5
@@ -42,7 +42,7 @@
 - [DL Basic] Multi-headed Attention Assignment
 - [DL Basic] 과제 해설 - CNN
 
-[**[DAY 15] Generative model**]()
+[**[DAY 15] Generative model**](https://github.com/ydy8989/boostcamp/tree/main/Week_3/Day_5)
 
 - [DL Basic] Generative Models 1
 - [DL Basic] Generative Models 2
