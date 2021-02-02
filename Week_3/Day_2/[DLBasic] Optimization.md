@@ -6,17 +6,8 @@
 
 **최적화와 관련된 주요한 용어**와 **다양한 Gradient Descent 기법**들을 배웁니다.
 
-**주요한 용어
-**Generalization,Overfitting, Cross-validation 등 다양한 용어가 있습니다. 
-각 용어들의 의미에 대해 배웁니다. 
 
-**다양한 Gradient Descent 기법
-**기존 SGD(Stochastic gradient descent)를 넘어서 최적화(학습)가 더 잘될 수 있도록 하는 다양한 기법들에 대해 배웁니다.**
-**
-
-마지막으로, **Gradient Descent 기법에 따른 성능의 변화**를 알아보는 실습을 합니다.
-
-
+각 용어들의 의미에 대해 배우고, 기존 SGD(Stochastic gradient descent)를 넘어서 최적화(학습)가 더 잘될 수 있도록 하는 다양한 Gradient Descent 기법들에 대해 배웁니다.
 
 **Further Questions**
 
