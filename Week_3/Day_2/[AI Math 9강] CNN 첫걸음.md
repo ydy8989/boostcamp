@@ -79,9 +79,13 @@ $i,j,k$가 바뀌어도 커널 $f$의 값은 바뀌지 않는다는 점에 주�
 ## 2.1. 2-dimensional convolution
 
 2D-Conv 연산은 1차원과 달리 커널을 입력벡터 상에서 움직여가면서 선형모델과 합성함수가 적용되는 구조이다. 
+
+
 $$
 [f*g](i,j) = \sum_{p,q}f(p,q)g(i+p, j+q)
 $$
+
+
 ![image-20210202212421707](https://user-images.githubusercontent.com/38639633/106603163-495e7800-65a1-11eb-8aa0-7256e8bfcfac.png)
 
 > 커널을 움직여가면서 convolution 연산을 진행한다.
@@ -93,6 +97,8 @@ $$
 
 
 입력 크기를 $(H,W)$, 커널 크기를 $(K_H, K_W)$, 출력 크기를 $(O_H, O_W)$라고 하면, 출력크기는 다음과 같이 계산한다. 
+
+
 $$
 O_H=H-K_H+1\\
 O_W=H-K_W+1
@@ -109,6 +115,8 @@ $$
 ## 2.2. 3-dimensional convolution
 
 3차원 Convolution의 경우 2차원 Convolution을 3번 적용한다고 생각하면 된다. 
+
+
 $$
 [f*g](i,j,k) = \sum_{p,q,r}f(p,q,r)g(i+p, j+q,k+r)
 $$
@@ -121,6 +129,8 @@ $$
 # 3. Convolution 연산의 역전파
 
 Convolution 연산은 커널이 모든 입력데이터에 공통으로 적용되기 때문에 역전파를 계산할 때 convolution 연산이 나오게 된다. 
+
+
 $$
 \begin{align}
 \frac{\part}{\part x}[f*g](x)
