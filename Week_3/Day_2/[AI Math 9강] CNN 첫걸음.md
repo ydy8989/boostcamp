@@ -12,8 +12,6 @@ Convolution 연산의 경우, 커널의 모든 입력데이터에 대해 공통�
 
 <br>
 
-
-
 # 1. Convolution 연산 이해하기
 
 지금까지 배운 MLP는 각 뉴런들이 선형모델과 활성함수로 모두 연결된 (Fully connected) 구조였다. 
@@ -45,8 +43,7 @@ Convolution 연산의 수학적인 의미는 신호(signal)를 **커널을 이�
 
 커널은 정의역 내에서 움직여도 변하지 않고(**Translation invariant**) 주어진 신호에 **국소적**으로 적용한다. 
 
-<p><a href="https://commons.wikimedia.org/wiki/File:Convolution_of_spiky_function_with_box2.gif#/media/File:Convolution_of_spiky_function_with_box2.gif">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Convolution_of_spiky_function_with_box2.gif" alt="Convolution of spiky function with box2.gif"></a>
+![Convolution_of_spiky_function_with_box2](../../assets/img/boostcamp/Convolution_of_spiky_function_with_box2.gif)
 
 > 파란색 : 신호
 >
