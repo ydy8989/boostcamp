@@ -7,6 +7,8 @@
 ## U Stage
 
 - 1~2주차 강의 **[code](https://github.com/ydy8989/lecture-note-python-basics-for-ai)**
+- 대부분의 흔적들은 BoostCamp AI Tech의 Edwith 강의 내용을 바탕으로 `markdown`으로 작성되었습니다. 
+- README.md의 특성상 보이지 않는 수식들은 [개인 블로그](https://ydy8989.github.io/)에서 합쳐진 형태의 포스팅으로 확인하실 수 있습니다:D
 
 ### [[Week 1] Python Basics For AI - 최성철 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
 
