@@ -34,3 +34,11 @@
 - [DAY 14] Recurrent Neural Networks
 - [DAY 15] Generative model
 
+### [[Week 4] 자연어처리 - 주재걸 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_4)
+
+- [DAY 16] 
+- [DAY 17] 
+- [DAY 18] 
+- [DAY 19] 
+- [DAY 20] 
+
