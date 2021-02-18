@@ -24,7 +24,7 @@
 - 번역 모델을 만들기 이전 필요한 전처리 기법에 대해 학습합니다.
 
 [[Day 18]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_3)
-
+ ㅜ
 1. Sequence to sequence with attention
 2. Beam search and BLEU score
 3. (실습 5강) Seq2Seq 구현
