@@ -1,6 +1,6 @@
 ### [Week 4] 자연어처리 - 주재걸 교수님
 
-[[Day 16]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_1)
+[[Day 16] NaiveBayse and Word2Vec](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_1)
 
 1. Week 4 Overview
 2. 데이터셋 준비하기
@@ -13,7 +13,7 @@
 
 - 대표적인 영어/한국어 전처리 기법들을 소개하고 알아봅니다. 
 
-[[Day 17]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_2)
+[[Day 17] Type of RNNs](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_2)
 
 1. Basics of Recurrent Neural Networks (RNNs)
 2. LSTM, GRU
@@ -23,7 +23,7 @@
 
 - 번역 모델을 만들기 이전 필요한 전처리 기법에 대해 학습합니다.
 
-[[Day 18]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_3)
+[[Day 18] Attention / Beam Search and BLEU](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_3)
 
 1. Sequence to sequence with attention
 2. Beam search and BLEU score
@@ -34,7 +34,7 @@
 
 - sequence를 modeling할 수 있는 대표적인 library 중 하나인 fairseq을 이용해 직접 seq2seq 모델을 만들어 학습시켜봅니다.
 
-[[Day 19]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_4)
+[[Day 19] Transformer I, II](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_4)
 
 1. Transformer
 2. (실습 7강) Multi-head Attention 구현
@@ -44,7 +44,7 @@
 
 - Out-of-Vocabulary 문제를 해결하기 위해 등장한 Byte Pair Encoding을 직접 구현해봅니다.
 
-[[Day 20]](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_5)
+[[Day 20] Pre-training Models](https://github.com/ydy8989/boostcamp/tree/main/Week_4/Day_5)
 
 1. Self-supervised Pre-training Models
 2. Other Self-supervised Pre-training Models
