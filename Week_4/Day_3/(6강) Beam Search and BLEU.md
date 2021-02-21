@@ -65,3 +65,64 @@
 
 ### Beam search
 
+디코더의 매 타임마다 적절한 $k$개의 가짓수를 고려하고, 그 중에서 가장 확률이 높은 것을 택하는 방법이다. 
+
+> Core idea: on each time step of the decoder, we keep track of the $k$ most probable partial translations (which we call hypothese)
+>
+> - $k$ is the beam size (in practice around 5 to 10)
+>
+> A hypothesis $y_1, \dots, y_t$ has a score of its log probability:
+> $$
+> score(y_1, \dots, y_t) = logP_{LM}(y_1, \dots, y_t\vert x)=\sum^t_{i=1}logP_{LM}(y_i\vert y_1, \dots, y_{t-1},x)
+> $$
+> Scores are all negative, and a higher score is better  
+> We search for high-scoring hypotheses, tracking the top k ones on each step  
+
+log를 씌움으로써 곱셈을 덧셈연산으로 바꾸고, 추척하기 쉽도록 하는 것이 목표
+
+- Beam search is not guaranteed to find a globally optimal solution.
+- But it is much more efficient than exhaustive search!
+
+모든 경우를 다 보는 것은 아니지만, 후보군을 추리기 쉽다.!!!
+
+**example)**
+
+![beamsearch](../../assets/img/boostcamp/beamsearch.gif){:width="80%"}{:.center}
+
+> 출처 : [https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture08-nmt.pdf](https://web.stanford.edu/class/cs224n/slides/cs224n-2019-lecture08-nmt.pdf)
+
+위와 같이 k=2일 때, 계속적으로 확률이 높은 후보군을 찾으면서 결과를 예측한다. 
+
+### Beam search: Stopping criterion
+
+- Usually we continue beam search until:
+  - We reach timestep 𝑇 (where 𝑇 is some pre-defined cutoff), or 
+  - We have at least 𝑛 completed hypotheses (where 𝑛 is the pre-defined cutoff)
+
+
+
+### Beam search: Finishing up
+
+- We have our list of completed hypotheses
+- How to select the top one with the highest score?
+- Each hypothesis $𝑦_1, … , 𝑦_t$ on our list has a score
+
+$$
+score(y_1, \dots, y_t) = logP_{LM}(y_1, \dots, y_t\vert x)=\sum^t_{i=1}logP_{LM}(y_i\vert y_1, \dots, y_{t-1},x)
+$$
+
+- Problem with this : **longer hypotheses have lower scores**
+- Fix : Normalize by length
+
+$$
+score(y_1, \dots, y_t) = \frac{1}{t}\sum^t_{i=1}logP_{LM}(y_i\vert y_1, \dots, y_{t-1},x)
+$$
+
+
+
+## BLEU score
+
+자연어 생성 모델에서 생성 모델의 품질 및 결과를 평가하는 scoring 방식을 알아보자
+
+
+
