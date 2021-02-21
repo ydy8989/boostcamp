@@ -36,9 +36,17 @@
 
 ### [[Week 4] 자연어처리 - 주재걸 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_4)
 
-- [DAY 16] 
-- [DAY 17] 
-- [DAY 18] 
-- [DAY 19] 
-- [DAY 20] 
+- [DAY 16] bag of words / Wrd2vc
+- [DAY 17] RNNs, LSTM, GRU
+- [DAY 18] Seq2seq with attention and BLEU score
+- [DAY 19] Transformer
+- [DAY 20] self-supervised pre-training models
+
+### [[Week 5] 추천시스템 - 신기정 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_5)
+
+- [DAY 21] What is Graph structure
+- [DAY 22] 검색 엔진에서의 그래프 / 그래프 in 바이럴 마케팅 
+- [DAY 23] 추천시스템 with graph(basic)
+- [DAY 24] 추천시스템 with graph(advanced)
+- [DAY 25] Graph neural network
 
