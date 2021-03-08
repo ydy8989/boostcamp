@@ -57,3 +57,11 @@
 - [Day 28] 김상훈 - 캐글 컴피티션 경진대회 그랜드마스터의 노하우 대방출 / 이준엽 - Full Stack ML Engineer
 - [Day 29] 박성준 - 자연어 처리를 위한 언어 모델의 학습과 평가 / 문지형 - 내가 만든 AI 모델은 합법일까, 불법일까
 - [Day 30] 구종만 - AI + ML과 Quant Trading / 오혜연 - AI Ethics
+
+### [[Week 7] Computer Vision](https://github.com/ydy8989/boostcamp/tree/main/Week_7)
+
+- [Day 31] Image Classification 1/ Annotation data efficient learning
+- [Day 32] Image Classification 2 / Semantic segmentation
+- [Day 33] Object detection / CNN Visualization
+- [Day 34] Instance/Panoptic segmentation and landmark localization / Conditional Generative Model
+- [Day 35] Multimodal captioning and speaking / 3D understanding
