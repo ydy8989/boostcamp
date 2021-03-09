@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # (3강) Image classification 2
 
 **강의 소개**
@@ -12,20 +16,20 @@
 
  
 
-## CNN architectures for image classification
+# CNN architectures for image classification
 
 강의에서는 다양한 아키텍쳐를 다뤘다. AlexNet, VGG, GoogleNet을 다뤘는데, 이 세 모델에 대한 내용은 따로 언급하지 않겠다. 그 이유는 앞서 정리했던 [포스팅](https://ydy8989.github.io/2021-02-03-cnn/)에서 어느정도 언급을 했기 때문에 새로이 자세하게 다루는 `ResNet`과 그 이후 모델에 대한 내용만을 다룰 예정이다. 
 
 
 
-### ResNet
+## ResNet
 
 ![image](https://user-images.githubusercontent.com/38639633/110426732-f02abc80-80e9-11eb-8045-fb432ec79558.png)
 
 - resnet은 2016 CVPR에 등장한 논문으로 **residual connection**을 처음 등장시킨 논문이다
 - 최근까지도 Backbone과 실험을 resnet으로 먼저 할만큼 주요한 논문중 하나이다. 
 
-#### revolutions of depth
+### revolutions of depth
 
 - resnet 논문의 주요 연구 성과는 깊은 층쌓기이다. 
 - 기존에도 연구자들이 많은 노력을 했지만, 층을 깊게 쌓지는 못했다. 
@@ -33,7 +37,7 @@
 
 
 
-#### Degradation problem
+### Degradation problem
 
 - as the network depth increases, accuracy gets saturated$\Rightarrow$rapidly
 
@@ -51,7 +55,7 @@
 
 
 
-#### Hypothesis
+### Hypothesis
 
 - plain layer : input $x$에서 $H(x)$로 다이렉트로 학습하는 것은 매우 어렵다고 판단.
 - residual block을 도입하여 $x$가 $H(x)$가 되는데 변화하는 정도($H(x)-x$)만큼만을 학습하도록 설계하는 것이 더 학습에 도움이 될 것이라고 가설을 설정하였다. 
@@ -70,7 +74,7 @@
 
 
 
-#### Analysis of residual connection
+### Analysis of residual connection
 
 - 이 같은 residual block이 왜 성능이 좋을까?
 
@@ -83,7 +87,7 @@
 
 
 
-#### PyTorch code for ResNet
+### PyTorch code for ResNet
 
 ![image](https://user-images.githubusercontent.com/38639633/110476068-ee321f00-8124-11eb-8b4b-f7cab84d90be.png)
 
@@ -108,11 +112,11 @@
 
 
 
-### Beyond ResNets
+## Beyond ResNets
 
 Resnet 이후에도 다양한 시도들이 있어왔다. 이에 대한 case study를 간략이 하고 넘어가자.
 
-#### DenseNet
+### DenseNet
 
 - ResNet에서는 skip connection을 통한 indentity mapping을 추가했다면, 
 
@@ -135,7 +139,7 @@ Resnet 이후에도 다양한 시도들이 있어왔다. 이에 대한 case stud
 
 
 
-#### SENet
+### SENet
 
 - depth를 높이거나 커넥션을 새로하는 방법이 아니라 현재 주어진 activation 간의 관계가 명확해지도록 채널간 관계를 모델링하고 중요도를 파악해서 특징을 attention할 수 있게끔하는 방식이다. 
 - recalibrate channel-wise responses by modeling interdependencies between channels
@@ -151,11 +155,66 @@ Resnet 이후에도 다양한 시도들이 있어왔다. 이에 대한 case stud
 
 
 
-#### EfficientNet
+### EfficientNet
 
 2019년에 제안된 방식으로, 이전까지는 다음 세 가지 방식 중 하나로 모델의 성능을 개선시켜왔다. 
 
-![image](https://user-images.githubusercontent.com/38639633/110484440-ff335e00-812d-11eb-9b2e-040490726ae5.png)
+![image](https://user-images.githubusercontent.com/38639633/110487019-85e93a80-8130-11eb-9f34-9c340a74a54f.png)
+
+- 위 세 가지 방식 각각은 성능을 좋아지게 한다. 
+
+- 하지만 일정 단계를 지나면, saturation이 오게되며 수렴하게 된다. 
+
+- EfficientNet은 이 세가지 방식을 적절하게 조합하여 성능을 올리자는 데서 아이디어를 얻는다. 
+
+- 그 방식은 `Compound scaling`이라는 방식이며 아래와 같은 구조로 구현된다. 
+
+	![image](https://user-images.githubusercontent.com/38639633/110487541-07d96380-8131-11eb-943f-5b4c34df42e1.png)
+
+- 이 방식을 통해 **효과적**으로 더 좋은 성능의 scaling 방식을 서칭하는데 그 의의가 있다. 
+
+	![image](https://user-images.githubusercontent.com/38639633/110489037-62bf8a80-8132-11eb-87f4-e31ce733f84e.png)
+
+- 매우 좋은 성능을 보이는 것을 확인할 수 있다. 
+
+	- 심지어 Neural architecture searching 계열의 모델보다도 더 좋은 성능을 보이는 것을 확인할 수 있다.
 
 
+
+### Deformable convolution
+
+- 표준 convolution 외에도 irregular한 convolution이 제안되었다. 
+
+- 이렇게 제안되는 이유는 자동차와 같이 형식적으로 고정된 사물이 아닌 물체 내에서도 상대적 위치가 변화하는 사물에 대한 이미지를 위해 제안되었다. (ex. 사람의 팔과 다리 등)
+
+- 특징은 offsets map을 추정하기 위한 branch가 따로 결합 되어있다는 점이다. 
+
+- offsets field에 따라서 각각의 weight를 옆으로 벌려주고 이에 맞게끔 activation과 irregular filter를 내적해서 하나의 값으로 도출한다. 
+
+	![image](https://user-images.githubusercontent.com/38639633/110490169-669fdc80-8133-11eb-9c5e-a3411557f5c5.png){:width="70%"}
+
+---
+
+- 2D spatial offset prediction for irregular convolution
+
+- Irregular grid sampling with 2D spatial offsets
+
+- Implemented by **satandard CNN** and grid sampling with **2D offsets**
+
+	![image](https://user-images.githubusercontent.com/38639633/110490252-77505280-8133-11eb-869e-67109adbe2d5.png){:width="70%"}
+
+	> (a) 기존의 정사각형으로 receptive field를 갖는 반면,   
+	> (b) 하나의 점에 대한 시작이 물체 내에 포진되어 있는 것을 알 수 있다. deformable한 shape을 따라서 receptive field를 갖는 것을 알 수 있다. 
+
+
+
+## Reference
+
+- Szegedy et al., Going Deeper with convolution, CVPR 2015
+- He et al.,Deep Residual Learning for Image Recognition, CVPR 2015
+- Veit et al., Residual Networks Behave Like Ensembles of Relatively Shallow Networks, NIPS 2016
+- Huang et al., Densely Connected Convolutional Networks, CVPR 2017
+- Hu et al., Squeeze-and-Excitation Networks, CVPR 2018
+- Tan and Le,EfficientNet : Rethinking Model Scalinng for Convolutional Neural Networks, ICML 2019
+- Dai et al., Deformable Convolutional Networks, ICCV 2017
 
