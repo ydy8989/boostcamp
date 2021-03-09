@@ -211,10 +211,45 @@ Resnet 이후에도 다양한 시도들이 있어왔다. 이에 대한 case stud
 ## Reference
 
 - Szegedy et al., Going Deeper with convolution, CVPR 2015
+
 - He et al.,Deep Residual Learning for Image Recognition, CVPR 2015
+
 - Veit et al., Residual Networks Behave Like Ensembles of Relatively Shallow Networks, NIPS 2016
+
 - Huang et al., Densely Connected Convolutional Networks, CVPR 2017
+
 - Hu et al., Squeeze-and-Excitation Networks, CVPR 2018
+
 - Tan and Le,EfficientNet : Rethinking Model Scalinng for Convolutional Neural Networks, ICML 2019
+
 - Dai et al., Deformable Convolutional Networks, ICCV 2017
 
+	
+
+# (4강) Semantic segmentation
+
+**강의 소개**
+
+1강과 3강의 Image classification은 사진이 주어졌을 때 사진 전체를 카테고리로 분류합니다.
+
+반면 Semantic Segmentation은 사진이 주어졌을 때 사진 내 각 픽셀을 카테고리로 분류하는 task 입니다.
+
+즉, 하나의 사진이 아닌, 사진에 있는 모든 물체들을 분류한다는 것입니다.
+
+본 강의에서는 먼저 최초의 end-to-end segmentation 모델 FCN을 시작으로 Hypercolumn 모델을 배웁니다.
+
+다음으로 segmentation의 breakthrough라고 볼 수 있는 UNet 모델에 대해 공부하고 Pytorch 코드 실습을 합니다.
+
+끝으로 최근까지 좋은 성능을 보이고 있는 DeepLab v3에 대해 배웁니다.
+
+
+
+**Further Reading**
+
+\- Checkerboard artifacts: https://distill.pub/2016/deconv-checkerboard/
+
+\- FCN: https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf
+
+\- UNet: https://arxiv.org/pdf/1505.04597.pdf
+
+ 

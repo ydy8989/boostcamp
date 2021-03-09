@@ -1,11 +1,5 @@
 **Week 7 Computer Vision**
 
- 안녕하세요 캠퍼 여러분, 7주차 Computer Vision 강의에 오신 것을 환영합니다.
-
- 
-
- 아래는 Computer Vision 강의에서 다룰 내용 및 과제에 대한 간단한 소개입니다. 
-
 [**Day 31 (3/8 월)**](https://github.com/ydy8989/boostcamp/tree/main/Week_7/Day_1)
 
 1. **Image Classification 1**
