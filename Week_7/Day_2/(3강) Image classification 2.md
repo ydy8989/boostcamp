@@ -2,21 +2,13 @@
 
 
 
-# (3강) Image classification 2
-
-**강의 소개**
+# CNN architectures for image classification
 
 이번 강의에서는 1강 Image Classification에 이어서 대표적인 CNN 모델들에 대해 배웁니다.
 
 먼저 VGGNet과 비슷한 시기에 등장한 GoogLeNet을 시작으로, 지금도 많이 쓰이고 있는 ResNet에 공부하고 실습을 진행합니다. 이 외에도 추가적으로 몇가지 CNN 모델들에 대한 소개를 합니다. 특히, 1강과 3강까지 다룬 4가지 모델 (AlexNet, VGGNet, GoogLeNet, ResNet)에 대하여 메모리 측면과 계산 효율 관점에서 비교 분석을 합니다.
 
-**Further Reading**
 
-\- ResNet: https://arxiv.org/pdf/1512.03385.pdf
-
- 
-
-# CNN architectures for image classification
 
 강의에서는 다양한 아키텍쳐를 다뤘다. AlexNet, VGG, GoogleNet을 다뤘는데, 이 세 모델에 대한 내용은 따로 언급하지 않겠다. 그 이유는 앞서 정리했던 [포스팅](https://ydy8989.github.io/2021-02-03-cnn/)에서 어느정도 언급을 했기 때문에 새로이 자세하게 다루는 `ResNet`과 그 이후 모델에 대한 내용만을 다룰 예정이다. 
 
@@ -211,36 +203,167 @@ Resnet 이후에도 다양한 시도들이 있어왔다. 이에 대한 case stud
 ## Reference
 
 - Szegedy et al., Going Deeper with convolution, CVPR 2015
-
 - He et al.,Deep Residual Learning for Image Recognition, CVPR 2015
-
 - Veit et al., Residual Networks Behave Like Ensembles of Relatively Shallow Networks, NIPS 2016
-
 - Huang et al., Densely Connected Convolutional Networks, CVPR 2017
-
 - Hu et al., Squeeze-and-Excitation Networks, CVPR 2018
-
 - Tan and Le,EfficientNet : Rethinking Model Scalinng for Convolutional Neural Networks, ICML 2019
-
 - Dai et al., Deformable Convolutional Networks, ICCV 2017
 
-	
 
-# (4강) Semantic segmentation
 
-**강의 소개**
+# Semantic segmentation
 
-1강과 3강의 Image classification은 사진이 주어졌을 때 사진 전체를 카테고리로 분류합니다.
+1강과 3강의 Image classification은 사진이 주어졌을 때 사진 전체를 카테고리로 분류합니다. 반면 Semantic Segmentation은 사진이 주어졌을 때 사진 내 각 픽셀을 카테고리로 분류하는 task 입니다. 즉, 하나의 사진이 아닌, 사진에 있는 모든 물체들을 분류한다는 것입니다. 본 강의에서는 먼저 최초의 end-to-end segmentation 모델 FCN을 시작으로 Hypercolumn 모델을 배웁니다. 다음으로 segmentation의 breakthrough라고 볼 수 있는 UNet 모델에 대해 공부하고 Pytorch 코드 실습을 합니다. 끝으로 최근까지 좋은 성능을 보이고 있는 DeepLab v3에 대해 배웁니다.
 
-반면 Semantic Segmentation은 사진이 주어졌을 때 사진 내 각 픽셀을 카테고리로 분류하는 task 입니다.
 
-즉, 하나의 사진이 아닌, 사진에 있는 모든 물체들을 분류한다는 것입니다.
 
-본 강의에서는 먼저 최초의 end-to-end segmentation 모델 FCN을 시작으로 Hypercolumn 모델을 배웁니다.
+## what is semantic segmentation
 
-다음으로 segmentation의 breakthrough라고 볼 수 있는 UNet 모델에 대해 공부하고 Pytorch 코드 실습을 합니다.
+### semantic segmentation
 
-끝으로 최근까지 좋은 성능을 보이고 있는 DeepLab v3에 대해 배웁니다.
+- `semantic segmentation`은 **영상단위**로 분류하는 것이아니라 **`픽셀 단위`**로 categorize하는 분야이다. 
+- 하지만 only care about semantie category. 즉 같은 클래스를 가지는 사물간의 분류는 하지 않는다.
+	- 여러 대의 자동차 간의 분류 (X), 자동차는 다 같은 자동차(O)
+- 같은 클래스여도 다른 사물일때 분류하는 방식 $\Rightarrow$ `Instance segmentation`
+
+![image](https://user-images.githubusercontent.com/38639633/110562394-c2e31a80-818c-11eb-8e19-fa0931765410.png)
+
+
+
+### Application
+
+- 의료 이미지
+- 자율주행
+- 등등..
+- object의 간의 클래스 분류를 통해 영상 처리가 쉬워진다. 
+
+
+
+
+
+## Semantic segmentation architectures
+
+### Fully convolutional Networks(FCN)
+
+- 첫 end-to-end segmentation architecture이다. 
+	- 입력에서부터 끝(출력)까지 모두 미분 가능한 구조로 되어있어서 입력과 출력 pair만 있으면 학습을 통해서 타겟 task를 해결할 수 있는 구조를 의미한다. 
+	- 이전까지는 수작업으로 진행했었다. 
+- Take an image of an arbitrary size as input, and output a segmentation map of the corresponding size to the input
+- 예를들어 alexnet은 flattening을 진행하는데, 입력 해상도가 호환되지 않으면, fc layer를 사용할 수 없었다. 벡터의 길이가 달라지기 때문이다. 
+
+---
+
+어떠한 원리로 semantice segmentation이 가능한지 살펴보기 앞서 우선 Fully `connected` layer와 Fully `convolutional` layer의 차이를 알아보자. 
+
+- Fully `connected` layer : output a fixed dimensional vector and discard spatial coordinates
+- Fully `convolutional` layer : output a classification map which has spatial coordinates
+
+![image](https://user-images.githubusercontent.com/38639633/110577029-25e0ab80-81a5-11eb-8161-32e9ef3f68ad.png)
+
+- connected 의 경우 공간정보를 고려하지 않고, fixed dimensional vector가 주어지면, 또 다른 fixed vector로 연산되는 레이어이다. 
+- 반면에, convolutional 레이어는 입력부터 tensor 형태의 activation map이고, 출력 또한 activation map 형태로 나오게 된다. 보통 1x1 컨볼루션 형태로 구현된다. 
+
+---
+
+Fully connected layer에서의 연산을 조금 더 자세히 살펴보면
+
+![image](https://user-images.githubusercontent.com/38639633/110577243-9ab3e580-81a5-11eb-9e19-8ff3f86f6e31.png)
+
+- 이전 레이어로부터 activation map이 출력이 되면 이것을 flattening을 통해 일자로 편다. 
+- 이후 이 벡터를 고정된 형태의 fully connected vector로 만들어준다.  
+- 이렇게 만들게 되면 영상의 공간정보를 고려하지 않고 섞여버린다. 
+	- 그 이유는 flattening하는 단계에서 이미 map을 Z모양으로 일자로 펴면서 공간정보를 잃고, fixed size vector로 만들면서 다시 뭉게지기 때문이다. 
+
+
+
+이러한 문제를 극복하기 위해 다음의 방법을 사용한다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110577493-16ae2d80-81a6-11eb-9e45-b50d1bd0aa10.png)
+
+- 각 위치마다 Channel axis 방향으로 flattening을 진행한다. 그렇게 쌓인 벡터 각각에 대하여 fully connected연산을 진행한다. 
+
+
+
+이는 완벽하게 fully convolutional layer와 동일한 연산이다. 
+
+> A 1x1 convolution layer classifies every feature vector of the convoltuional feature map
+
+![image](https://user-images.githubusercontent.com/38639633/110577655-6c82d580-81a6-11eb-8e5e-42e27db3d60e.png)
+
+- 채널 축으로 1x1 convolution 커널이 Fully connected layer의 한 웨이트 컬럼이라고 볼 수 있다. 
+- 즉, 필터 갯수만큼 위치마다 별도로 돌리면 각 위치에서의 결과값을 얻는 것과 다르지 않다.   
+
+---
+
+결론적으로 fully connected layer를 1x1 convolutions로 대체함으로써 입력 사이즈에도 대응할 수 있는 fully convolutional neural network를 만들 수 있게 된다.  
+
+> - 1x1 convolution layer classifies every featrue vector of the convolutional feature map
+> - limitation : predicted score map is in a very low-resolution
+> - why?
+> 	- For having a large receptive field, several spatial pooling layers are deployed
+> - Solution: Enlarge the score ap by upsampling
+
+- input map이 큰 것에 비해 output은 매우 저해상도인 경우가 많다
+- stride나 pooling 레이어는 receptive field 사이즈를 키워서 넓은 context를 고려, 더 정답에 가까운 결론을 내리기 위함이다. 하지만 이 방식이 저해상도의 원인이 된다. 
+- 이를 개선하기 위한 방식으로 `upsampling`이 고려되었다. 
+
+---
+
+**Upsampling**
+
+- The size of the input image is reduced to a smaller feature map
+- upsample to the size of input image
+
+이미지를 원래 사이즈로 복원하는 작업을 진행한다.  
+
+![image](https://user-images.githubusercontent.com/38639633/110578284-cdf77400-81a7-11eb-85cd-6f90d7583665.png)
+
+- 스트라이드나 풀링을 제거하면, 작은 activation을 유지하지 못하게 된다. 하지만, 똑같은 수의 레이어를 사용했을 때 영상의 전반적 context를 파악하지 못한다. 그 말인즉슨, 영상을 '요약'하지 못한다는 뜻이다. 해상도를 유지하자니 영상의 context를 파악하지 못하고, 요약을 하자니 해상도가 안좋아지는 것이다. 
+- 따라서 일단은 작게 만들어서 receptive field는 최대한 키워놓고(그래야 성능이 좋다), 그 후에 upsampling을 진행하여 강제로 resolution을 맞춰주는 원리이다. 
+- 이 같은 upsampling 방식에는 두 가지가 있다. 
+	- `Transposed convolution`
+	- `Upsample and convolution`
+
+---
+
+#### Transposed convolution
+
+Transposed convolution에 대한 내용은 [여기](https://distill.pub/2016/deconv-checkerboard/)에 자세히 나와있으니 참고하길 추천한다.
+
+- input의 모든 element에 필터부분을 붙여서 연산하고, 이것을 반복한다.
+- 중첩되는 부분에 대해서는 더해지도록 연산한다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110582468-9b517980-81af-11eb-96dc-979d05b80451.png)
+
+- 하지만 위와 같은 방식으로 연산을 진행할때 $az + bx$와 같이 중첩이 생기는 부분이 발생한다.
+- 이부분을 신경써서 튜닝을 해줘야한다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110582679-e3709c00-81af-11eb-8b84-1c1c9057f9fc.png)
+
+**Upsample and convolution**
+
+위의 blocky한 중첩 문제를 해결하기 위해 고안된 방식이다. 
+
+- transpose 방식은 어설프게 overlapping되는 문제가 발생했다.
+	- 하나의 레이어로 한방에 처리했다.
+- upsampling 방식은 이를 보완하고 골고루 영향을 받게 만든다. 
+	- 업샘플링 오퍼레이션을 두개로 분리하여 interpolation을 적용하고, 다양한 방식을 사용하여 convolution을 진행한다.
+	- 이전에는 학습이 불가능한 learnable upsampling을 만들기 위해 convolution 레이어를 적용한다. 
+
+ 
+
+
+
+### Hypercolumns for object segmentation
+
+### U-Net
+
+### DeepLab
+
+
+
+
 
 
 
