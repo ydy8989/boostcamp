@@ -341,23 +341,97 @@ Transposed convolution에 대한 내용은 [여기](https://distill.pub/2016/dec
 
 ![image](https://user-images.githubusercontent.com/38639633/110582679-e3709c00-81af-11eb-8b84-1c1c9057f9fc.png)
 
-**Upsample and convolution**
+#### Upsample and convolution
 
-위의 blocky한 중첩 문제를 해결하기 위해 고안된 방식이다. 
+위의 **blocky한 중첩 문제(Check board artifact 현상)**를 해결하기 위해 고안된 방식이다. 
 
-- transpose 방식은 어설프게 overlapping되는 문제가 발생했다.
-	- 하나의 레이어로 한방에 처리했다.
-- upsampling 방식은 이를 보완하고 골고루 영향을 받게 만든다. 
-	- 업샘플링 오퍼레이션을 두개로 분리하여 interpolation을 적용하고, 다양한 방식을 사용하여 convolution을 진행한다.
-	- 이전에는 학습이 불가능한 learnable upsampling을 만들기 위해 convolution 레이어를 적용한다. 
+- transpose방식은 어설프게 overlapping되는 문제가 발생했다.
+	- 하나의 레이어로 한방에 처리하려다 보니 이러한 효과를 낳았다. 
+- 반면에 `upsampling` 방식은 이를 보완하고 골고루 영향을 받게 만든다. 
+	- 업샘플링 오퍼레이션은 영상처리에서 많이 쓰이는 interpolation(보간법 : Nearest-neighbor, Bilinear를 많이 사용한다)을 적용하고, 다양한 방식을 사용하여 convolution을 진행한다.
+	- 이전에는 학습이 불가능한 learnable upsampling을 만들기 위해 **convolution 레이어**를 적용한다. 
 
- 
+---
+
+다시 FCN으로 돌아와서, 아무리 upsampling을 잘 하더라도 잃어버린 정보를 다시 복원하기란 쉽지 않다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110883892-839d0100-8327-11eb-87b6-82aa86b22c72.png)
+
+- 낮은 레이어쪽(좌측)에서는 receptive field 사이즈가 작기 때문에, 국지적이며 디테일하게보고, 작은 차이에도 민감한 경향이 있다. 
+- 반대로 높은 레이어쪽에서는 해상도는 낮지만, 큰 receptive field를 가지고 영상에서 의미론적인 정보를 많이 포함하는 경향을 가지고 있다. 
+- 하지만 semantic segmentation에서는 이 두 가지 특징이 모두 필요하다. 
+
+---
+
+이러한 두 가지 특징을 모두 취하기 위해 다음과 같이 퓨전을 하게된다. 
+
+- integrates activations from lower layers into prediction
+- Preserves higher spatial resolution
+- Captures lower-level semantics at the same time
+
+ ![image](https://user-images.githubusercontent.com/38639633/110893918-3fffc280-833a-11eb-8b23-329e55a39412.png)
+
+- 위 그림과 같이 중간 단계의 특징들을 합칠수록 큰 도움이 된다는 것을 확인할 수 있다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110894008-6a518000-833a-11eb-9215-2762079939a5.png)
+
+- Features of FCN
+	- Faster
+		- The end-to-end architecture that does not depend on other hand-crafted components
+	- Accurate
+		- Feature representation and classifiers are jointly optimized
 
 
 
 ### Hypercolumns for object segmentation
 
+공교롭게도 비슷한 시기에 비슷한 연구가 나왔었는데(Hypercolumn이라는 task) 이 논문의 경우 target task가 semantic segmentation으로 같고, motivation 또한 동일하다. 심지어 1 x 1 convolution을 사용한 것도 동일하다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110894276-ecda3f80-833a-11eb-9eff-83c8d2e1aacf.png)
+
+- 다른점이 있다면, FCN이 1 by 1 convolutional layer와 FC-layer의 차이를 강조했다면, 낮은 레이어와 높은 레이어의 feature를 융합해서 사용하는 것이 가장 강조되는 파트였다. 
+- `Hypercolumn` at a pixel is a stacked vector of all CNN units on that pixel
+	- Fine localized information is extracted from earlier layers
+	- Coarse semantic information is extracted from latter layers
+- 아무튼 FCN과 마찬가지로 낮은레이어와 높은레이어의 특징을 합치는 방법을 제시하였다.
+- 다만 end-to-end는 아니었고, 물체의 bounding box를 설정한 후 적용하는 방식의 사용법이었다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110894700-a9cc9c00-833b-11eb-9be1-1a2d897c7d8b.png)
+
+> 재밌는 사실은 FCN의 저자와 동일 년도 동일 학교(UC 버클리)에서 제안된 논문이다. 하지만, 인용 수는 1000번정도로 FCN의 수만회와 비교해서 많이 밀리는 모습을 보여주었다. 
+
+
+
 ### U-Net
+
+기본적으로 U-Net의 특징을 살펴보면
+
+- Fully convolutional network이다. 
+- Skip connection 이라는 새로운 방식을 제안했다. 
+
+
+
+**Overall architecture**
+
+![image](https://user-images.githubusercontent.com/38639633/110896653-5f4d1e80-833f-11eb-909c-467267b5e5b2.png)
+
+- 입력 image를 몇몇 convolution을 통과시킨 뒤, pooling을 통한 receptive field를 크게하기 위해서 해상도를 낮추는 대신 채널 수를 늘린다. 
+- 이를 반복하며 작은 activation map을 구하고 여기에 영상의 정보가 잘 녹아있다고 가정한다. 
+- 이 과정을 `Contracting path`라고도 한다.
+	- Repeatedly applying 3 x 3 convolutions
+	- Doubling the number of feature channels
+	- Being used to capture holistic context
+- 여기까지는 일반적인 Convolution 부분과 크게 다르지 않다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110897010-00d47000-8340-11eb-909a-5c51f56fc351.png)
+
+- 단계적으로 activation map의 해상도와 채널 사이즈를 올려준다. 
+- 채널 사이즈는 Downsampling 과정에서 같은 층에 있는 채널수와 동일하게 맞춰서 낮은 층에서부터 올라오는 activation map 과 concatenate를 실행해준다. 
+- 이러한 방식의 경로를 `Expanding path`라고한다. 
+
+![image](https://user-images.githubusercontent.com/38639633/110896653-5f4d1e80-833f-11eb-909c-467267b5e5b2.png){:width="50%"}![image](https://user-images.githubusercontent.com/38639633/110897010-00d47000-8340-11eb-909a-5c51f56fc351.png){:width="50%"}
+
+
 
 ### DeepLab
 
