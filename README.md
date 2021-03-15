@@ -65,3 +65,14 @@
 - [Day 33] Object detection / CNN Visualization
 - [Day 34] Instance/Panoptic segmentation and landmark localization / Conditional Generative Model
 - [Day 35] Multimodal captioning and speaking / 3D understanding
+
+ 
+
+### [[Week 8] 모델 경량화](https://github.com/ydy8989/boostcamp/tree/main/Week_8)
+
+- [Overview] week 8 overview & (0강) OT / 데이터셋 관련 공지
+- [Day 36] 가벼운 모델 / 팔리는 물건 / 가장 적당하게
+- [Day 37] 모델의 시공간 / 알뜰히
+- [Day 38] 빠르게 / 알뜰히(2)
+- [Day 39] 양자화 / 지식 증류
+- [Day 40] 행렬 분해 / 돌아보기
