@@ -58,7 +58,7 @@
 - [Day 29] 박성준 - 자연어 처리를 위한 언어 모델의 학습과 평가 / 문지형 - 내가 만든 AI 모델은 합법일까, 불법일까
 - [Day 30] 구종만 - AI + ML과 Quant Trading / 오혜연 - AI Ethics
 
-### [[Week 7] Computer Vision](https://github.com/ydy8989/boostcamp/tree/main/Week_7)
+### [[Week 7] Computer Vision - 오태현 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_7)
 
 - [Day 31] Image Classification 1/ Annotation data efficient learning
 - [Day 32] Image Classification 2 / Semantic segmentation
@@ -68,7 +68,7 @@
 
  
 
-### [[Week 8] 모델 경량화](https://github.com/ydy8989/boostcamp/tree/main/Week_8)
+### [[Week 8] 모델 경량화 - 홍원의님](https://github.com/ydy8989/boostcamp/tree/main/Week_8)
 
 - [Overview] week 8 overview & (0강) OT / 데이터셋 관련 공지
 - [Day 36] 가벼운 모델 / 팔리는 물건 / 가장 적당하게
