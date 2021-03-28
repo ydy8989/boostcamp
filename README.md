@@ -91,7 +91,7 @@
 	- stage 5(공통) : Visualization - 2주간 진행
 - 각 주제에 맞는 주차별 강의를 정리할 예정입니다.
 
-### [[Stage1] Image Classification](https://github.com/ydy8989/boostcamp/tree/main/Week_10[stage1])
+### [[Stage1] Image Classification](https://github.com/ydy8989/boostcamp/tree/main/stage1)
 
 - [3/29] Day 1 - P Stage Start ! 
 - [3/30] Day 2 - Data Feeding
