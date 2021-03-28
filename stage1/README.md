@@ -1,4 +1,4 @@
-**[3/29] Day 1 - P Stage Start !**
+[**[3/29] Day 1 - P Stage Start !**](https://github.com/ydy8989/boostcamp/tree/main/stage1/day1)
 
 학습목표
 
@@ -36,7 +36,7 @@
 	- 베이스라인 코드를 제공
 	- 하기에 따라 상당히 많은 부분을 배워갈 수 있음
 
-**[3/30] Day 2 - Data Feeding**
+[**[3/30] Day 2 - Data Feeding**](https://github.com/ydy8989/boostcamp/tree/main/stage1/day2)
 
 학습목표
 
@@ -69,7 +69,7 @@
 	- DataLoader
 	- Dataset과 DataLoader는 다른 것입니다.
 
-**[3/31] Day 3 - Model**
+[**[3/31] Day 3 - Model**](https://github.com/ydy8989/boostcamp/tree/main/stage1/day3)
 
  학습목표
 
@@ -100,7 +100,7 @@
 		- Feature Extraction
 		- Fine tuning
 
-**[4/1] Day 4 - Training & Inference**
+[**[4/1] Day 4 - Training & Inference**](https://github.com/ydy8989/boostcamp/tree/main/stage1/day4)
 
  학습목표
 
@@ -140,7 +140,7 @@
 	- 최종 Submission
 4. Appendix: Pytorch Lightning
 
-**[4/2] Day 5 - More..**
+[**[4/2] Day 5 - More..**](https://github.com/ydy8989/boostcamp/tree/main/stage1/day5)
 
  학습 목표
 
