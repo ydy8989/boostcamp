@@ -2,13 +2,15 @@
 
 ## 진행기간
 
-- 2021.01.18 ~ 진행중 (2021.06 종료 예정)
+- U stage : 2021.01.18 ~ 2021.03.22 
+- 1주간 방학 : 2021.03.23 ~ 2021.03.26
+- P stage : 2021.03.29 ~ 진행중 (2021.06 종료 예정)
 
 ## U Stage
 
-- 1~2주차 강의 **[code](https://github.com/ydy8989/lecture-note-python-basics-for-ai)**
+- 1~2주차 강의 실습 코드 :  **[code](https://github.com/ydy8989/lecture-note-python-basics-for-ai)**
 - 대부분의 흔적들은 BoostCamp AI Tech의 Edwith 강의 내용을 바탕으로 `markdown`으로 작성되었습니다. 
-- README.md의 특성상 보이지 않는 수식들은 [개인 블로그](https://ydy8989.github.io/)에서 합쳐진 형태의 포스팅으로 확인하실 수 있습니다:D
+- Github.com의`README.md` 특성상 보이지 않는 수식들은 [개인 블로그](https://ydy8989.github.io/)에서 합쳐진 형태의 포스팅으로 확인하실 수 있습니다:D
 
 ### [[Week 1] Python Basics For AI - 최성철 교수님](https://github.com/ydy8989/boostcamp/tree/main/Week_1)
 
@@ -68,11 +70,32 @@
 
  
 
-### [[Week 8] 모델 경량화 - 홍원의님](https://github.com/ydy8989/boostcamp/tree/main/Week_8)
+### [[Week 8] 모델 경량화 - 홍원의님 (정리중..)](https://github.com/ydy8989/boostcamp/tree/main/Week_8)
 
-- [Overview] week 8 overview & (0강) OT / 데이터셋 관련 공지
-- [Day 36] 가벼운 모델 / 팔리는 물건 / 가장 적당하게
-- [Day 37] 모델의 시공간 / 알뜰히
-- [Day 38] 빠르게 / 알뜰히(2)
-- [Day 39] 양자화 / 지식 증류
-- [Day 40] 행렬 분해 / 돌아보기
+- ~~[Overview] week 8 overview & (0강) OT / 데이터셋 관련 공지~~
+- ~~[Day 36] 가벼운 모델 / 팔리는 물건 / 가장 적당하게~~
+- ~~[Day 37] 모델의 시공간 / 알뜰히~~
+- ~~[Day 38] 빠르게 / 알뜰히(2)~~
+- ~~[Day 39] 양자화 / 지식 증류~~
+- ~~[Day 40] 행렬 분해 / 돌아보기~~
+
+
+
+## P Stage
+
+- P stage는 총 5개의 스테이지로 구성된다. 
+	- stage 1(공통) : Image Classification - 2주간 진행
+	- stage 2 : 한국어 언어 모델 학습 및 다중 과제 튜닝 (KLUE) - 2주간 진행
+	- stage 3 : Dialogue State Tracking (DST) - 4주간 진행
+	- stage 4 : Deep Knowledge Tracing (DKT) - 4주간 진행
+	- stage 5(공통) : Visualization - 2주간 진행
+- 각 주제에 맞는 주차별 강의를 정리할 예정입니다.
+
+### [[Stage1] Image Classification](https://github.com/ydy8989/boostcamp/tree/main/Week_10[stage1])
+
+- [3/29] Day 1 - P Stage Start ! 
+- [3/30] Day 2 - Data Feeding
+- [3/31] Day 3 - Model
+- [4/1] Day 4 - Training & Inference
+- [4/2] Day 5 - More..
+
