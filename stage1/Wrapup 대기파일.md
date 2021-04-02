@@ -45,7 +45,7 @@ Wrapup 대기파일
 
 [4일차]
 
-- 점수 및 순위 : 75위 / 66.11%, 0.46%
+- 점수 및 순위 : 52위 / 74.6%,  0.66%
 
 - 시도한거 :
 
@@ -62,7 +62,21 @@ Wrapup 대기파일
 
 		- ...
 
-		
+	- sgd와 adam 왜? 안돼? 
+
+	- focalloss arc face loss 
+
+		- gamma...5
+
+	- 스케줄러 적용 
+
+		- 코사인
+
+[5일차]
+
+- 61등 / 75.17% / f1 0.66 
+
+
 
 
 
@@ -71,4 +85,9 @@ Wrapup 대기파일
 - 결국엔 전처리다. 
 	- incorrect랑 60대 늘리기
 	- 노 밸리데이션으로 테스트(최적의 모델 후 ..)
-	- 
+- Seed 43 |Loss 0.123790 | Fold 1 of 4| Epcoh 43 of 70 | id Base | nfnet f0 | Cropped | 59 age filter | CosineAnnealingWarmRestarts 2e-3 to 7e-5 | ArcFaceLoss FocalLoss gamma=5.0
+- Seed 43 |Loss 1.243411 | Fold 1 of 4| Epcoh 7 of 70 | id Base | tf_efficientnet_b3_ns | Cropped | 59 age filter | CosineAnnealingWarmRestarts 2e-3 to 7e-5 | ArcFaceLoss FocalLoss gamma=5.0 | gridshuffle
+- 
+- age filtering
+- 
+
