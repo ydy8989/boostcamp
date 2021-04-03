@@ -80,7 +80,14 @@ Wrapup 대기파일
 	- 제시한 베이스라인 코드를 보면서 흡수중
 	- focal loss 미적용
 	- 스케줄러 미적용인데 사용되는 것 같음. 확인 요망
-- 
+
+
+
+[주말]
+
+- 시도예정 :
+	- optimization custom - adamP
+	- 
 
 
 
@@ -95,5 +102,13 @@ Wrapup 대기파일
 - Seed 43 |Loss 1.243411 | Fold 1 of 4| Epcoh 7 of 70 | id Base | tf_efficientnet_b3_ns | Cropped | 59 age filter | CosineAnnealingWarmRestarts 2e-3 to 7e-5 | ArcFaceLoss FocalLoss gamma=5.0 | gridshuffle
 - 
 - age filtering
+- 
+
+---
+
+test records
+
+- [ex16] 300, 300 / Adam / f1loss / CosineAnnealingWarmRestarts / effi-b3 / 20epoch / randomcrop(300,300) / val0.2
+- [ex17] 300, 300 / **AdamW** / f1loss / CosineAnnealingWarmRestarts / effi-b3 / 20epoch / randomcrop(300,300) / **val0.0**
 - 
 
