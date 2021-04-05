@@ -115,6 +115,7 @@ test records
 - [ex23] 300, 300 / AdamW / **focalloss** / ~~CosineAnnealingWarmRestarts~~ / **nfnet** / 25epoch / randomcrop(300,300) / val0.2 - 개망
 - [ex24] 300, 300 / AdamW / focalloss / CosineAnnealingWarmRestarts / nfnet / 25epoch / randomcrop(300,300) / val0.2
 - [ex27] 300, 300 / AdamW / **f1** / CosineAnnealingWarmRestarts / nfnet / 25epoch / randomcrop(300,300) / **val0**
+- [ex43] seed 777 / adamw / crossEntropy / effinet b0 / CosineAnnealingWarmRestarts  / 20 에폭 / randomcrop + resize만 /  val0.2
 - 
 
 
