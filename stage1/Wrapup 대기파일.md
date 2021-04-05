@@ -87,7 +87,8 @@ Wrapup 대기파일
 
 - 시도예정 :
 	- optimization custom - adamP
-	- 
+	- 데이터 valid 나누는거 조정
+		- 전체 데이터 나누고 - 데이터셋 - transform만들고 - 로더
 
 
 
@@ -110,5 +111,15 @@ test records
 
 - [ex16] 300, 300 / Adam / f1loss / CosineAnnealingWarmRestarts / effi-b3 / 20epoch / randomcrop(300,300) / val0.2
 - [ex17] 300, 300 / **AdamW** / f1loss / CosineAnnealingWarmRestarts / effi-b3 / 20epoch / randomcrop(300,300) / **val0.0**
+- [ex21] 300, 300 / AdamW / f1loss / CosineAnnealingWarmRestarts / effi-b3 / **53epoch** / randomcrop(300,300) / val0.2
+- [ex23] 300, 300 / AdamW / **focalloss** / ~~CosineAnnealingWarmRestarts~~ / **nfnet** / 25epoch / randomcrop(300,300) / val0.2 - 개망
+- [ex24] 300, 300 / AdamW / focalloss / CosineAnnealingWarmRestarts / nfnet / 25epoch / randomcrop(300,300) / val0.2
+- [ex27] 300, 300 / AdamW / **f1** / CosineAnnealingWarmRestarts / nfnet / 25epoch / randomcrop(300,300) / **val0**
 - 
+
+
+
+
+
+
 
