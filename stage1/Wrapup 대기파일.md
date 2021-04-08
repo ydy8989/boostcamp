@@ -108,15 +108,26 @@ Wrapup 대기파일
 	- kfold 구현
 	- 클래스 3개로 나누기(9가지로)
 		- 18개 -> 9개(성별 예측되는지만 보기) -> 3개x3개로 
-	- 
 
 - 만들어야하는거 
 	- 검증셋 넣고 빼고 가능하게
 	- transforms을 train, val 따로 적용가능하게!
 
+- 시도한거 : 
 
+	- 58age filtering + 60대 데이터 뻥튀기 : 
+	- 피어세션에서 들은 것을 바탕으로 데이터 증강
+		- ![image-20210406231905411](../../assets/img/boostcamp/image-20210406231905411.png)
+		- 
+	- 스텝lr / 큰 이미지 그대로 / 끽해봐야 horizonflip정도 / focal이 좋아보인다. 
+	- 확실한거 : 
+		- MaskBaseDataset < MaskSplitByProfileDataset[77번]
+		- focal gamma5.0 vs CE (CE가 더 잘나옴)
+	- 
 
-
+	- 해볼거 : 
+		- 
+		- 
 
 
 
