@@ -125,9 +125,10 @@ Wrapup 대기파일
 		- focal gamma5.0 vs CE (CE가 더 잘나옴)
 	- 
 
-	- 해볼거 : 
-		- 
-		- 
+[8,9일차]
+- LB등수 : 변화없음 
+- 시도한것들 :
+	- cross-validation:
 
 
 
