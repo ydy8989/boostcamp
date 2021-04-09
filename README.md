@@ -97,5 +97,6 @@
 - [3/30] Day 2 - Data Feeding
 - [3/31] Day 3 - Model
 - [4/1] Day 4 - Training & Inference
-- [4/2] Day 5 - More..
+- [4/2] Day 5 - Ensemble & Experiment Toolkits and Tips
+
 
