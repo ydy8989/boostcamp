@@ -99,4 +99,16 @@
 - [4/1] Day 4 - Training & Inference
 - [4/2] Day 5 - Ensemble & Experiment Toolkits and Tips
 
+### [[Stage2] 한국어 언어 모델 학습 및 다중 과제 튜닝 - 김성현 멘토@스마일게이트.AI](https://github.com/ydy8989/boostcamp/tree/main/stage2)
+
+- [4/12] Day 1 - 인공지능과 자연어처리
+- [4/13] Day 2 - 자연어 전처리 
+- [4/14] Day 3 - BERT 언어모델 (1)
+- [4/15] Day 4 - BERT 언어모델 (2)
+- [4/16] Day 5 - BERT 언어모델 기반의 단일 문장 분류
+- [4/19] Day 6 - BERT 언어모델 기반의 두 문장 관계 분류
+- [4/20] Day 7 - BERT 언어모델 기반의 문장 토큰 분류
+- [4/21] Day 8 - GPT 언어모델
+- [4/22] Day 9 - GPT 언어모델 기반의 자연어 생성
+- [4/23] Day 10 - 최신 자연어처리 연구
 
