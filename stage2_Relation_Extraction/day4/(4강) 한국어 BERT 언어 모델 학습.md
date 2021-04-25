@@ -48,12 +48,12 @@
 **Reference**
 
 - LM training from scratch
-	- https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb#scrollTo=5oESe8djApQw 
+	- [https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb#scrollTo=5oESe8djApQw](https://colab.research.google.com/github/huggingface/blog/blob/master/notebooks/01_how_to_train.ipynb#scrollTo=5oESe8djApQw ) 
 - 나만의 BERT Wordpiece Vocab 만들기
-	- https://monologg.kr/2020/04/27/wordpiece-vocab/
+	- [https://monologg.kr/2020/04/27/wordpiece-vocab/](https://monologg.kr/2020/04/27/wordpiece-vocab/)
 	- [https://velog.io/@nawnoes/Huggingface-tokenizers%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-Wordpiece-Tokenizer-%EB%A7%8C%EB%93%A4%EA%B8%B0](https://velog.io/@nawnoes/Huggingface-tokenizers를-사용한-Wordpiece-Tokenizer-만들기)
 - Extracting training data from large language model
-	- https://www.youtube.com/watch?v=NGoDUEz3tZg
+	- [https://www.youtube.com/watch?v=NGoDUEz3tZg](https://www.youtube.com/watch?v=NGoDUEz3tZg)
 - BERT 추가 설명
-	- https://jiho-ml.com/weekly-nlp-28/
+	- [https://jiho-ml.com/weekly-nlp-28/](https://jiho-ml.com/weekly-nlp-28/)
 
