@@ -285,6 +285,182 @@ ETRI\개체명 인식 데이터를 활용하여 학습 및 평가 진행 (정보
 - 언어 모델을 학습할 때 feature가 무엇인지를 고민하고, 사람이 자연어 처리할 때 어떠한 feature를 사용할 것인지 그리고 그것을 모델에 녹인다면 좋은 성능을 발휘할 수 있을 것으로 생각된다. 
 
 
+```python
+!pip install transformer
+
+from transformers import AutoModel, AutoTokenizer, BertTokenizer
+# Store the model we want to use
+MODEL_NAME = "bert-base-multilingual-cased"
+
+# We need to create the model and tokenizer
+model = AutoModel.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+```
+
+- `!pip install transformers`를 통해 간단히 설치할 수 있다. 
+- 모델 Name에 따른 모델 불러오기와 토크나이저 불러오기가 가능하다. 
+- Automodel, AutoTokenizer를 통해 자동으로 모델에 맞는 토크나이저 및 모델을 load할 수 있다. 
+	- 기존에는 bert모델을 사용하려면 bertmodel, bertTokenizer를 불러오고, Electra 모델을 사용하려면 ElectraModel, ElcetraTokenizer를 불러와야만 했다 
+	- 하지만, 이를 자동으로 매핑해주는 Auto - 시리즈를 통해 이제는 Name만으로 간단히 지정할 수 있다
+	- (주의) 그렇지만, 항상 완벽하지는 않다. 특정 모델에는 버그가 존재하여 제대로 불러와지지 않는 현상이 간혹 있다고 한다.
+
+```python
+print(tokenizer.vocab_size)
+>>> 119547
+```
+- 11만개의 vocab으로 이뤄진 토크나이저 사전임을 확인할 수 있다. 
+- 위 tokenizer는 구글에서 공개한 다국어 모델 학습에 사용된 'bert-base-multilingual-cased' tokenizer 사전이며 약 12만개의 wordpiece 토큰들 중 약 **8천개** 가량만이 한국어이다. 
+	- ~~어지간하면 사용하지마라...~~
+- 워드피스 기준 vocab을 정의하려면 약 3만개정도로 사이즈를 지정하면 한자어도 인식가능한 정도의 코퍼스를 제작할 수 있다. 
+
+```python
+for i, key in enumerate(tokenizer.get_vocab()):
+    print(key)
+    if i > 20:
+        break
+```
+
+```
+>>>
+Vol
+Estadual
+##երը
+সংস্করণ
+Voogd
+RTL
+nghề
+##ंगा
+##шина
+Europese
+1001
+##هار
+##优
+##யில்
+##lmesi
+Sioux
+##ლე
+##ətli
+§
+```
+
+
+
+간단한 토크나이징 예시를 살펴보면
+
+```python
+text = "이순신은 조선 중기의 무신이다."
+tokenized_input_text = tokenizer(text, return_tensors="pt")
+for key, value in tokenized_input_text.items():
+    print("{}:\n\t{}".format(key, value))
+```
+
+```
+input_ids:
+	tensor([[   101,   9638, 119064,  25387,  10892,  59906,   9694,  46874,   9294,
+          25387,  11925,    119,    102]])
+token_type_ids:
+	tensor([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])
+attention_mask:
+	tensor([[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])
+```
+
+- tokenizer에 text를 넣고 pytorch로 반환하겠다는 의미의 'pt' 인자를 넣어주면 객체를 생성한다.
+
+```python
+tokenized_text = tokenizer.tokenize(text)
+print(tokenized_text)
+input_ids = tokenizer.encode(text)
+print(input_ids)
+decoded_ids = tokenizer.decode(input_ids)
+print(decoded_ids)
+```
+
+```
+['이', '##순', '##신', '##은', '조선', '중', '##기의', '무', '##신', '##이다', '.']
+[101, 9638, 119064, 25387, 10892, 59906, 9694, 46874, 9294, 25387, 11925, 119, 102]
+[CLS] 이순신은 조선 중기의 무신이다. [SEP]
+```
+
+- `tokenizer.tokenize(text)`를 통해 위와 같이 토크나이징이 된 모습을 직접 확인할 수 있다. 
+- `.encode()`는 텍스트를 인코딩 결과를 출력해준다. 
+	- 위에서 101번과 102는 문장의 시작과 끝을 알려주는 토크나이저이다. 
+	- 이를 `.decode()`를 통해 다시 변환하면 `[cls]`와 `[sep]`로 변환 되어있는 것을 확인할 수 있다. 
+- `tokenizer`의 default로 앞 뒤의 스페셜 토큰이 붙는다. 
+- 이것을 원치 않는다면 아래와 같이 `add_special_tokens=False`옵션을 통해 넣지 않을 수 있다.
+
+```python
+tokenized_text = tokenizer.tokenize(text, add_special_tokens=False)
+print(tokenized_text)
+input_ids = tokenizer.encode(text, add_special_tokens=False)
+print(input_ids)
+decoded_ids = tokenizer.decode(input_ids)
+print(decoded_ids)
+```
+
+```
+['이', '##순', '##신', '##은', '조선', '중', '##기의', '무', '##신', '##이다', '.']
+[9638, 119064, 25387, 10892, 59906, 9694, 46874, 9294, 25387, 11925, 119]
+이순신은 조선 중기의 무신이다.
+```
+
+[](https://ydy8989.github.io/2021-03-03-GAT/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
