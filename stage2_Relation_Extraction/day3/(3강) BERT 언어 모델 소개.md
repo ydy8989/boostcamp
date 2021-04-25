@@ -403,9 +403,51 @@ print(decoded_ids)
 이순신은 조선 중기의 무신이다.
 ```
 
-[](https://ydy8989.github.io/2021-03-03-GAT/)
+---
 
+특정 역할을 위한 special token도 추가할 수 있다.
 
+```python
+text = "[ENTITY]이순신은 조선 중기의 무신이다.[/ENTITY]"
+# [ENTITY]이순신[/ENTITY]
+tokenized_text = tokenizer.tokenize(text, add_special_tokens=False)
+print(tokenized_text)
+input_ids = tokenizer.encode(text, add_special_tokens=False)
+print(input_ids)
+decoded_ids = tokenizer.decode(input_ids)
+print(decoded_ids)
+```
+
+```
+['[', 'EN', '##TI', '##TY', ']', '이', '##순', '##신', '##은', '조선', '중', '##기의', '무', '##신', '##이다', '.', '[', '/', 'EN', '##TI', '##TY', ']']
+[164, 38702, 59879, 11517, 166, 9638, 119064, 25387, 10892, 59906, 9694, 46874, 9294, 25387, 11925, 119, 164, 120, 38702, 59879, 11517, 166]
+[ ENTITY ] 이순신은 조선 중기의 무신이다. [ / ENTITY ]
+```
+
+- 스페셜 토큰을 추가하지 않을 경우, cumstom 토큰은 영문 그대로 인식하여 분리된다. 
+	- `ENTITY`토큰이 각각 분리된 것을 볼 수 있다. 
+- 아래와 같이 `add_special_toekns`을 통해 스페셜 토큰을 등록할 수 있다. 
+
+```python
+text = "[SHKIM]이순신은 조선 중기의 무신이다.[/SHKIM]"
+
+added_token_num += tokenizer.add_special_tokens({"additional_special_tokens":["[ENTITY]", "[/ENTITY]"]})
+tokenized_text = tokenizer.tokenize(text, add_special_tokens=False)
+print(tokenized_text)
+input_ids = tokenizer.encode(text, add_special_tokens=False)
+print(input_ids)
+decoded_ids = tokenizer.decode(input_ids)
+print(decoded_ids)
+decoded_ids = tokenizer.decode(input_ids,skip_special_tokens=True)
+print(decoded_ids)
+```
+
+```
+['[ENTITY]', '이', '##순', '##신', '##은', '조선', '중', '##기의', '무', '##신', '##이다', '.', '[/ENTITY]']
+[119552, 9638, 119064, 25387, 10892, 59906, 9694, 46874, 9294, 25387, 11925, 119, 119553]
+[ENTITY] 이순신은 조선 중기의 무신이다. [/ENTITY]
+이순신은 조선 중기의 무신이다.
+```
 
 
 
