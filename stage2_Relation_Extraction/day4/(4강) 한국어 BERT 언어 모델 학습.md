@@ -45,10 +45,6 @@
 
 
 
-
-
-
-
 **Reference**
 
 - LM training from scratch
