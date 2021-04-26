@@ -185,7 +185,7 @@ Bert의 [CLS] token의 vector를 classification하는 Dense layer를 사용하�
 
 	의 순서로 학습이 진행된다. 
 
-
+  
 
 **Reference**
 
