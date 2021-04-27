@@ -158,7 +158,7 @@ $$
 
 이를 수식적으로 objective로 표현하면 
 $$
-\prod_{t=1}^{T}\prod_{i=1}^{J}p(V_t^j\vert D_t)
+\prod_{t=1}^{T}\prod_{i=1}^{J}p(V_t^j\vert D_t, S^j)
 $$
 
 
