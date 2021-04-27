@@ -4,7 +4,7 @@
 
 
 
-### [WEEK 1](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/week1)
+### [WEEK 1](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/Week1)
 
 **[4/26] Introduction to DST & WoS Data EDA**
 
@@ -58,7 +58,7 @@
 
  
 
-### **[WEEK 2](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/week2)** 
+### **[WEEK 2](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/Week2)** 
 
  **[5/3] Open-Vocab Based DST Models**
 
@@ -118,7 +118,7 @@
 
  
 
-### [WEEK 3](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/week3)
+### [WEEK 3](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/Week3)
 
 **[5/10] Advanced DST Models**
 
@@ -153,7 +153,7 @@
 
  
 
-### [WEEK 4](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/week4)
+### [WEEK 4](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking/Week4)
 
 **[5/17~20] WEEK4 Special Mission**
 
