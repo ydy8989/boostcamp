@@ -71,7 +71,7 @@ Ontology-based DST의 대표적인 모델들을 알아봅니다.
 
 ![image](https://user-images.githubusercontent.com/38639633/116193805-e24cfb80-a76a-11eb-9e6e-d1de4811fc54.png)
 
-### Neural Belief Tracker (NBT)
+### Neural Belief Tracker (NBT) 
 
 - 과거에는 DST를 heuristic하고 rule based하게 풀었다면, 이 모델은 data-driven으로 해결한 모델이다. 
 - 아래 그림에서 `Candidate pair`라는 slot value들의 후보군을 볼 수 있다. 이 때 이 pair들과 context들을 인코딩, 게이팅 등을 하여 각 후보마다 binary decision을 진행하여 분류하게 된다. 
