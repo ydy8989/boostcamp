@@ -65,9 +65,12 @@ Decoder를 사용함으로써 conditional한 language modeling을 통해서 valu
 
 ![image](https://user-images.githubusercontent.com/38639633/116958165-a4088c80-acd4-11eb-9a5a-9aca20693ad0.png)
 
+### Sequicity
 
+[[paper] Sequicity: Simplifying Task-oriented Dialogue Systems with Single Sequence-to-Sequence Architectures (2018, Lei et al.)](Sequicity: Simplifying Task-oriented Dialogue Systems with Single Sequence-to-Sequence Architectures (2018, Lei et al.))
 
-
+- 이전까지는 classification method로 다뤘지만, seq2seq 방식의 single framwork 하나로 구현하였다. 
+-  
 
 
 
