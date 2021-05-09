@@ -70,7 +70,18 @@ Decoder를 사용함으로써 conditional한 language modeling을 통해서 valu
 [[paper] Sequicity: Simplifying Task-oriented Dialogue Systems with Single Sequence-to-Sequence Architectures (2018, Lei et al.)](Sequicity: Simplifying Task-oriented Dialogue Systems with Single Sequence-to-Sequence Architectures (2018, Lei et al.))
 
 - 이전까지는 classification method로 다뤘지만, seq2seq 방식의 single framwork 하나로 구현하였다. 
--  
+
+	- $B$ : dialogue state
+
+	- $R$ : 시스템 발화
+
+	- $U$ : 유저 발화
+
+	- 현재턴의 dialogue state는 이전 턴에 트래킹 되었던 $B_{t-1}, R_{t-1}, U_{t-1}$이 input으로 들어가게 된다. 
+
+		![image](https://user-images.githubusercontent.com/38639633/117569108-f1369500-b0fe-11eb-8342-76b2b7681631.png)
+
+	- 
 
 
 
