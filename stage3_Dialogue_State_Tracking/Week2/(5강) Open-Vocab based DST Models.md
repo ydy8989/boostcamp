@@ -81,7 +81,7 @@ Decoder를 사용함으로써 conditional한 language modeling을 통해서 valu
 
 		![image](https://user-images.githubusercontent.com/38639633/117569108-f1369500-b0fe-11eb-8342-76b2b7681631.png)
 
-	- 
+	- eorleorl
 
 
 
