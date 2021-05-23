@@ -99,7 +99,7 @@
 - [4/1] Day 4 - Training & Inference
 - [4/2] Day 5 - Ensemble & Experiment Toolkits and Tips
 
-### [[Stage2] 한국어 언어 모델 학습 및 다중 과제 튜닝 - 김성현 멘토@스마일게이트.AI](https://github.com/ydy8989/boostcamp/tree/main/stage2_Relation_Extraction)
+### [[Stage2] Relation_Extraction - 김성현 멘토@스마일게이트.AI](https://github.com/ydy8989/boostcamp/tree/main/stage2_Relation_Extraction)
 
 - [4/12] Day 1 - 인공지능과 자연어처리
 - [4/13] Day 2 - 자연어 전처리 
@@ -111,4 +111,20 @@
 - [4/21] Day 8 - GPT 언어모델
 - [4/22] Day 9 - GPT 언어모델 기반의 자연어 생성
 - [4/23] Day 10 - 최신 자연어처리 연구
+
+### [[Stage3] Dialogue State Tracking - 김성동 마스터@Clova AI](https://github.com/ydy8989/boostcamp/tree/main/stage3_Dialogue_State_Tracking)
+
+- [4/26] Introduction to DST & WoS Data EDA
+- [4/27] Ontology-Based DST Model
+- [4/28] Special Mission 1: SUMBT 구현하기
+- [4/29] Special Mission 2 : SUMBT 학습하기
+- [5/3] Open-Vocab Based DST Models
+- [5/4] Other DST Models
+- [5/6] Special Mission 1 : TRADE 모델의 Slot Gate 변경해보기
+- [5/7] Special Mission 2 : TRADE 모델의 Encoder 변경해보기
+- [5/10] Advanced DST Models
+- [5/11] Remaining Challenges
+- [5/12] Special Mission 1 : Task-Adaptive Pretraining
+- [5/13] Special Mission 2 : Task-Adaptive Pretraining2
+- [5/17] Special Mission: CoCo
 
