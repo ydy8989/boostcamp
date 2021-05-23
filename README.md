@@ -91,7 +91,7 @@
 	- stage 5(공통) : Visualization - 2주간 진행
 - 각 주제에 맞는 주차별 강의를 정리할 예정입니다.
 
-### [[Stage1] Image Classification - 김태진 멘토@번개장터](https://github.com/ydy8989/boostcamp/tree/main/stage1)
+### [[Stage1] Image Classification - 김태진 멘토@번개장터](https://github.com/ydy8989/boostcamp/tree/main/stage1_Mask_image_classification)
 
 - [3/29] Day 1 - P Stage Start ! 
 - [3/30] Day 2 - Data Feeding
@@ -99,7 +99,7 @@
 - [4/1] Day 4 - Training & Inference
 - [4/2] Day 5 - Ensemble & Experiment Toolkits and Tips
 
-### [[Stage2] 한국어 언어 모델 학습 및 다중 과제 튜닝 - 김성현 멘토@스마일게이트.AI](https://github.com/ydy8989/boostcamp/tree/main/stage2)
+### [[Stage2] 한국어 언어 모델 학습 및 다중 과제 튜닝 - 김성현 멘토@스마일게이트.AI](https://github.com/ydy8989/boostcamp/tree/main/stage2_Relation_Extraction)
 
 - [4/12] Day 1 - 인공지능과 자연어처리
 - [4/13] Day 2 - 자연어 전처리 
