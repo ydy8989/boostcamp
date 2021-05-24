@@ -1,3 +1,22 @@
+# Overview
+### 강의 소개
+
+본 강의는 DKT 태스크 소개와 DKT를 풀기 위한 시퀀스 데이터 모델링에 대해 배우고, 그 중 가장 핵심적인 아키텍쳐인 Transformer를 NLP 이외 도메인에 활용하는 방법을 다룹니다.
+현장에서 Project 수행시 겪는 여러 Hurdle, Challenge 에 대해 이해하고, Model Serving 등 End-to-End Project 수행 연습을 통해 실제 Project 수행 능력을 함양합니다
+
+### 강의 목표
+
+DKT 태스크에 대한 이해 및 여러 접근방법과 장단점 파악
+Transaction Data등 Sequence Data Model 이해 및 구현
+문제에 맞는 Transformer Architect 설계 및 구현
+End-to-End Project 수행 연습
+
+### 강의 타겟
+
+Python, Pytorch를 어느 정도 다룰 줄 아는 수강생
+DKT 등 교육 AI에 관심 있는 수강생
+Sequence Data Modeling에 관심 있는 수강생
+
 **[5/24 월] Intro & EDA**
 
 - **1강 DKT 이해 및 Sequence Data Modeling**
