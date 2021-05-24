@@ -1,7 +1,5 @@
 # BoostCamp AI tech
 
-[TOC]
-
 ## Abstract
 
 - **U stage** : 2021.01.18 ~ 2021.03.22 
