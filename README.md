@@ -141,3 +141,18 @@
 - [5/13] Special Mission 2 : Task-Adaptive Pretraining2
 - [5/17] Special Mission: CoCo
 
+### [[Stage4] Deep Knowledge Tracing - 이영수 마스터](https://github.com/ydy8989/boostcamp/tree/main/stage4_Deep_Knowledge_Tracing)
+
+- [5/24] Intro & EDA
+- [5/25] Baseline (LGBM, LSTM, Transformer)
+- [5/26] Sequence Data 문제 정의에 맞는 Transformer Architecture 설계
+- [5/27] Transformer Input Representation, Output 구현
+- [5/28] Office Hour : Baseline 톺아보기 - 조대현 멘토 
+- [5/31] Kaggle Riiid Competition Winner's Solution 탐색
+- [6/1] Model 성능 개선
+- [6/4] Office Hour : DKT 논문 톺아보기 - 박현병 멘토
+- [6/7] ML Pipeline
+- [6/8] Model Serving 
+- [6/9] End-to-End 프로젝트 수행
+- [6/10] Office Hour : P stage에서 진행한 모델들에 클라이언트 사이드를 적용한 배포 과정 소개- 서중원 멘토
+- [6/16] 마스터 클래스
