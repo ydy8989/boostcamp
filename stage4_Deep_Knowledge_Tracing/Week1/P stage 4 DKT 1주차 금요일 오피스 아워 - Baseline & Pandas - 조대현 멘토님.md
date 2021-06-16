@@ -23,7 +23,7 @@
 			- valid(*args)
  
 ### Arguments
-
+ 
 - 기본
 	- `-v`, `-var` 2가지 형태로 입력 가능
 	- default, type, required(필수인자여부), help(설명글)까지 설정 가능

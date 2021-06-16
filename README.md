@@ -7,8 +7,8 @@
 - **P stage** : 2021.03.29 ~ 진행중 (2021.06.22 종료 예정)
 	- Stage_1 : Image Classification (Mask Dataset - Multi Label, Multi Class) : *LB Solo 152등* 
 	- Stage_2 : Relation Extraction (between Sentence and Entity)  : *LB Solo 46등*
-	- Stage_3 : Dialogue State Tracking(DST) : :1st_place_medal:*LB Team 1등*
-	- Stage_4 : Deep Knowledge Tracing(DKT) - 진행중...
+	- Stage_3 : Dialogue State Tracking(DST) : *Team LB (public 1등 | private 1등)*:1st_place_medal:
+	- Stage_4 : Deep Knowledge Tracing(DKT) - *Team LB (public 2등 | private 4등)*
 - 본 Repository는 Naver BoostCamp AI tech 과정을 진행하며 학습한 내용들을 정리하는 공간입니다. 추가적인 내용들은 [https://ydy8989.github.io](https://ydy8989.github.io)에서 확인할 수 있습니다. :smile:
 
 
@@ -96,8 +96,8 @@
 - 각 스테이지는 본인이 선택한 주제로 진행하는 대회에 참가하는 방식으로 진행됩니다. Upstage가 제공하는 플랫폼에서 진행되며 Kaggle, Dacon과 유사한 형식으로 진행됩니다.
   - Stage_1 (2주) : Image Classification (Mask Dataset - Multi Label, Multi Class) : *LB Solo 152등* 
   - Stage_2 (2주) : Relation Extraction (between Sentence and Entity)  : *LB Solo 46등*
-  - Stage_3 (4주) : Dialogue State Tracking(DST) : :1st_place_medal:*LB Team 1등*
-  - Stage_4 (4주) : Deep Knowledge Tracing(DKT) - 진행중...
+  - Stage_3 (4주) : Dialogue State Tracking(DST) : *Team LB (public 1등 | private 1등)* :1st_place_medal:
+  - Stage_4 (4주) : Deep Knowledge Tracing(DKT) : *Team LB (public 2등 | private 4등)*
 - 아래의 디렉토리는 각 대회가 진행되는 중 제공되었던 강의에 대한 학습 자료 및 멘토링 내용, 오피스 아워에 대한 내용들을 포함하고 있습니다.
 
 
