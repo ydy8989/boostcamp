@@ -6,6 +6,28 @@
 
  
 
+##  Generation-based MRC
+
+
+
+## Pre-processing
+
+
+
+## Model
+
+
+
+## Post-proessing
+
+
+
+
+
+
+
+
+
 **Further Reading**
 
 - [Introducing BART](https://sshleifer.github.io/blog_v2/jupyter/2020/03/12/bart.html)
@@ -13,3 +35,4 @@
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer (T5) ](https://arxiv.org/abs/1910.10683)
 
     
+
